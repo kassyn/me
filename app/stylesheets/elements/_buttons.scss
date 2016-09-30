@@ -2,7 +2,7 @@
 
 	.btn-primary {
 		@extend %btn;
-		background: $btn-color-primary;
+		background-color: $btn-color-primary;
 		width: 100%;
 		text-align: center;
 		text-transform: uppercase;
@@ -13,6 +13,11 @@
 		box-shadow: 0 2px 5px 0px #ccc;
 		border-radius: 2px;
 		cursor: pointer;
+		transition: background-color .2s ease-in-out;
+
+		&:hover {
+			background-color: darken( $btn-color-primary, 15% );
+		}
 
 		i {
 			margin-right: 6px;

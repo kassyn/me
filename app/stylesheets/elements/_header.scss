@@ -23,11 +23,19 @@
 	.user-header {
 		float: right;
 		margin-top: 8px;
-		cursor: pointer;
+		position: relative;
 
 		.icon-action {
 			right: 0;
 			@extend %vertical-align;
+		}
+
+		.user-popup {
+			margin-top: 10px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			width: 350px;
 		}
 	}
 
@@ -41,6 +49,7 @@
 		font-size: 14px;
 		position: relative;
 		padding-right: 40px;
+		cursor: pointer;
 
 		span {
 			font-size: 11px;
@@ -48,6 +57,84 @@
 
 		.user-name {
 			line-height: 1;
+		}
+	}
+
+	.user-popup {
+		background: #fff;
+		box-shadow: 0 0 1px 1px rgba( #000, .2 );
+		border-radius: 3px;
+		line-height: 1.4;
+		padding: 20px;
+		opacity: 0;
+		animation: show-in-popup .3s ease-in-out forwards;
+
+		&:before {
+			background: #fff;
+			box-shadow: -1px -1px 1px 0 rgba( #000, .3 );
+			content: "";
+			height: 15px;
+			position: absolute;
+			right: 20px;
+			transform: rotate( 45deg );
+			top: -7.5px;
+			width: 15px;
+		}
+
+		a {
+			color: #58585a;
+		}
+
+		img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
+
+		.user-name,
+		.user-access {
+			margin-bottom: 10px;
+		}
+
+		.user-avatar {
+			margin-right: 20px;
+			width: 80px;
+		}
+
+		.user-popup-info {
+			overflow: hidden;
+		}
+
+		.user-popup-footer {
+			border-top: 1px solid #e8e8e8;
+			margin: 20px -20px -20px;
+			padding: 0 20px;
+		}
+
+		.user-popup-footer-wrap {
+			display: table;
+			width: 100%;
+		}
+
+		.user-action-first,
+		.user-action-last {
+			display: table-cell;
+			height: 40px;
+			vertical-align: middle;
+		}
+
+		.user-action-last {
+			text-align: right;
+		}
+	}
+
+	@keyframes :global( show-in-popup ) {
+		0% {
+			transform: translateY(-10px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }
