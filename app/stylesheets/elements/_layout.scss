@@ -1,0 +1,28 @@
+:global {
+
+	.main {
+		margin-top: 100px;
+	}
+
+	.side-content {
+		position: relative;
+		float: left;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+
+	.wrap {
+		margin: 0px 30px 0 30px;
+	}
+
+	.content {
+		margin-left: $width-menu-small;
+
+		@media(min-width: $container) {
+
+			& {
+				margin-left: $width-menu-large;
+			}
+		}
+	}
+}

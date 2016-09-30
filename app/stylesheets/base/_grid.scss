@@ -1,0 +1,54 @@
+@mixin col($col) {
+	width: perc(($col-width * $col) + (($col - 1) * $col-margin), $grid);
+}
+
+:global {
+
+	[class*="-column"] {
+		margin-bottom: 15px;
+	}
+
+	@media (min-width: $tablet) {
+
+		%clear {
+			clear: both;
+			margin-left: 0;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		[class*="-column"] {
+			float: left;
+			margin-left: perc($col-margin, $grid);
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.one-column    { @include col(1); }
+		.two-column    { @include col(2); }
+		.three-column  { @include col(3); }
+		.four-column   { @include col(4); }
+		.five-column   { @include col(5); }
+		.six-column    { @include col(6); }
+		.seven-column  { @include col(7); }
+		.eight-column  { @include col(8); }
+		.nine-column   { @include col(9); }
+		.ten-column    { @include col(10); }
+		.eleven-column { @include col(11); }
+		.twelve-column { @include col(12); margin-left: 0; }
+
+		.four-nth .four-column:nth-child(3n+1) {
+			@extend %clear;
+		}
+
+		.three-nth .four-column:nth-child(4n+1) {
+			@extend %clear;
+		}
+	}
+}

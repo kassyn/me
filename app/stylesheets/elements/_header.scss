@@ -1,0 +1,53 @@
+:global {
+
+	.header {
+		height: 70px;
+		background: #fff;
+		box-shadow: 0 0 6px 0 $color-menu;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding: 8px 14px;
+		z-index: 100;
+	}
+
+	.branding {
+		float: left;
+
+		img {
+			display: block;
+			height: auto;
+		}
+	}
+
+	.user-header {
+		float: right;
+		margin-top: 8px;
+		cursor: pointer;
+
+		.icon-action {
+			right: 0;
+			@extend %vertical-align;
+		}
+	}
+
+	.user-avatar {
+		float: left;
+		margin-right: 5px;
+	}
+
+	.user-info {
+		float: right;
+		font-size: 14px;
+		position: relative;
+		padding-right: 40px;
+
+		span {
+			font-size: 11px;
+		}
+
+		.user-name {
+			line-height: 1;
+		}
+	}
+}

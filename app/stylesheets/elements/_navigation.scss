@@ -1,0 +1,87 @@
+:global {
+
+	@mixin open {
+		width: $width-menu-large;
+
+		.overlayer-menu {
+			width: $width-menu-large;
+		}
+
+		.navigation .menu-name {
+			padding-left: 12px;
+			text-align: left;
+			left: 0;
+			position: initial;
+			opacity: 1;
+		}
+
+		.navigation .menu-icon {
+			width: 40px;
+		}
+	}
+
+	.overlayer-menu {
+		position: fixed;
+		background: $color-menu;
+		top: 0;
+		z-index: 1;
+		bottom: 0;
+		width: $width-menu-small;
+		transition: width .2s ease-in-out;
+	}
+
+	.side-menu {
+		width: $width-menu-small;
+		position: absolute;
+	}
+
+	.navigation {
+		position: relative;
+		z-index: 5;
+		font-size: 14px;
+	}
+
+	.menu-item {
+		padding: 0 15px;
+		margin-bottom: 35px;
+
+		&:hover .menu-link {
+			color: #d2d1d1;
+		}
+	}
+
+	.menu-link {
+		color: #fff;
+		transition: color .3s ease;
+		display: table;
+		width: 100%;
+	}
+
+	.menu-name {
+		position: absolute;
+		left: 9999em;
+		opacity: 0;
+		transition: opacity .4s ease-in-out;
+		@extend %cell-middle;
+	}
+
+	.menu-icon {
+		font-size: 32px;
+		text-align: center;
+		@extend %cell-middle;
+	}
+
+	@media(max-width: $container) {
+
+		.side-menu:hover {
+			@include open;
+		}
+	}
+
+	@media(min-width: $container) {
+
+		.side-menu {
+			@include open;
+		}
+	}
+}

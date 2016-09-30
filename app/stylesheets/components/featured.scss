@@ -1,0 +1,62 @@
+%arrow {
+	@extend %vertical-align;
+	@extend %btn;
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+	text-shadow: 0 0 2px #000;
+}
+
+.wrap {
+	width: 100%;
+	overflow: hidden;
+	height: 242px;
+	border-radius: 8px;
+	transform: translate3d(0, 0, 0);
+}
+
+.prev {
+	@extend %arrow;
+	left: 10px;
+}
+
+.next {
+	@extend %arrow;
+	right: 10px;
+}
+
+.figure {
+	overflow: hidden;
+	height: 242px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.caption {
+	position: absolute;
+	height: 56px;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.56);
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 56px;
+	padding: 0 15px;
+
+	span {
+		color: $color-text-secondary;
+		font-size: 18px;
+		margin-left: 10px;
+	}
+}
+
+:global {
+
+	.swiper-slide {
+		position: relative;
+		float: left;
+	}
+}
