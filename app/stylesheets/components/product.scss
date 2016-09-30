@@ -1,6 +1,6 @@
 .wrap {
 	width: 100%;
-	border: 1px solid e3e3e3;
+	border: 1px solid #e3e3e3;
 	border-radius: 3px;
 	background: #fff;
 	padding: 12px;
@@ -18,28 +18,10 @@
 	margin: 27px 0;
 }
 
-.call {
-	@extend %btn;
-	background: $btn-color;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
-	color: #fff;
-	font-weight: bold;
-	font-size: 12px;
-	padding: 10px;
-	box-shadow: 0 2px 5px 0px #ccc;
-
-	i {
-		margin-right: 6px;
-		font-size: 22px;
-		vertical-align: sub;
-	}
-}
-
 .figure {
 	border: 1px solid #f5f5f5;
 	margin: 15px 0;
+	padding: 12px 0;
 
 	img {
 		display: block;

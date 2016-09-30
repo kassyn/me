@@ -24,7 +24,7 @@
 		position: fixed;
 		background: $color-menu;
 		top: 0;
-		z-index: 1;
+		z-index: 5;
 		bottom: 0;
 		width: $width-menu-small;
 		transition: width .2s ease-in-out;
@@ -37,7 +37,7 @@
 
 	.navigation {
 		position: relative;
-		z-index: 5;
+		z-index: 10;
 		font-size: 14px;
 	}
 
@@ -80,7 +80,7 @@
 
 	@media(min-width: $container) {
 
-		.side-menu {
+		.home .side-menu {
 			@include open;
 		}
 	}

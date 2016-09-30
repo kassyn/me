@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class Menu extends React.Component {
 	render() {
@@ -6,10 +7,10 @@ class Menu extends React.Component {
 			<div className="side-menu">
 				<ul className="navigation">
 					<li className="menu-item">
-						<a className="menu-link" href="#">
+						<Link to="/" className="menu-link">
 							<div className="menu-icon fa fa-home"></div>
 							<div className="menu-name">Home</div>
-						</a>
+						</Link>
 					</li>
 					<li className="menu-item">
 						<a className="menu-link" href="#">

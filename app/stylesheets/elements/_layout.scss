@@ -17,12 +17,12 @@
 
 	.content {
 		margin-left: $width-menu-small;
+	}
 
-		@media(min-width: $container) {
+	@media(min-width: $container) {
 
-			& {
-				margin-left: $width-menu-large;
-			}
+		.home .content {
+			margin-left: $width-menu-large;
 		}
 	}
 }

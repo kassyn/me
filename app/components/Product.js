@@ -17,7 +17,7 @@ class Product extends React.Component {
 
 				<div className={styles.price}>R$ 15,90</div>
 
-				<button type="button" className={styles.call}>
+				<button type="button" className="btn-primary">
 					<i className="fa fa-cart-plus"></i> Carrinho
 				</button>
 			</div>

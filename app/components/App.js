@@ -3,9 +3,17 @@ import Header from './Header';
 import Menu from './Menu';
 
 class App extends React.Component {
+	getClassPage() {
+		var routes  = this.props.routes
+		  , current = routes[routes.length - 1]
+		;
+
+		return ( current || {} ).guid || '';
+	}
+
 	render() {
 		return (
-			<div>
+			<div className={this.getClassPage()}>
 				<Header />
 
 				<div className="main">

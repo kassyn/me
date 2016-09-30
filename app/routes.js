@@ -6,7 +6,7 @@ import Registration from './components/Registration';
 
 export default (
 	<Route component={App}>
-		<Route path='/' component={Home} />
-		<Route path='/add' component={Registration} />
+		<Route guid="home" path='/' component={Home} />
+		<Route guid="user" path='/add' component={Registration} />
 	</Route>
 );

@@ -1,0 +1,94 @@
+:global {
+	.form-add {
+		background: #fff;
+		width: 360px;
+		display: block;
+		margin: 0 auto;
+		border: 1px solid #e3e3e3;
+		border-radius: 3px;
+		padding: 30px;
+	}
+
+	.form-header {
+		margin-bottom: 20px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 132px;
+			height: auto;
+		}
+	}
+
+	.form-group {
+		position: relative;
+		margin-bottom: 45px;
+
+		.control-label {
+			position: absolute;
+			top: 0.25rem;
+			pointer-events: none;
+			padding-left: 0.125rem;
+			z-index: 1;
+			color: #b3b3b3;
+			font-size: 1rem;
+			font-weight: normal;
+			transition: all 0.28s ease;
+		}
+
+		input {
+			display: block;
+			background: none;
+			padding: 0.125rem 0.125rem 0.0625rem;
+			font-size: 1rem;
+			border-width: 0;
+			border-color: transparent;
+			line-height: 1.9;
+			width: 100%;
+			color: transparent;
+			transition: all 0.28s ease;
+			box-shadow: none;
+			height: 1.9rem;
+
+			&:focus,
+			&:valid {
+				outline: none;
+				color: #333;
+			}
+
+			&:focus ~ .control-label,
+			&:valid ~ .control-label, {
+				font-size: 0.8rem;
+				top: -1rem;
+				left: 0;
+			}
+
+			&:focus ~ .bar::before {
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		.bar {
+			position: relative;
+			border-bottom: 0.0625rem solid #999;
+			display: block;
+
+			&:before {
+				content: '';
+				height: 0.125rem;
+				width: 0;
+				left: 50%;
+				bottom: -0.0625rem;
+				position: absolute;
+				background: #6bafd4;
+				transition: left 0.28s ease, width 0.28s ease;
+				z-index: 2;
+			}
+		}
+	}
+
+	.form-actions {
+		padding-top: 10px;
+	}
+}
