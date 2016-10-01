@@ -10,7 +10,7 @@ class Registration extends React.Component {
 					</div>
 
 					<div className="form-group">
-						<input type="email" required="required"/>
+						<input type="text" required="required"/>
 						<label className="control-label">Email</label>
 						<i className="bar"></i>
 					</div>
